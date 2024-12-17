@@ -1,0 +1,115 @@
+<body>
+  <div class="container">
+    <div class="filter-container">
+      <div class="dropdown-container">
+        <button class="dropdown-btn">
+          Select Task
+          <img class="dropdown-arrow" src="assets/icon/down.png" alt="Down Arrow" />
+        </button>
+        <div class="dropdown-menu">
+          <a href="">Web App</a>
+          <a href="">Mobile App</a>
+          <a href="">Function</a>
+          <a href="">Algorithm</a>
+        </div>
+      </div>
+
+
+      <!-- Search Bar -->
+
+      <div class="group">
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+          <g>
+            <path
+              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+            </path>
+          </g>
+        </svg>
+        <input placeholder="Search python..." type="search" class="input">
+      </div>
+    </div>
+    <h2 class="tea-challenges-heading">
+      Tea Challenges
+      <button class="tea-info-button" title="More Info">
+        <i class="fas fa-info-circle"></i>
+      </button>
+      <span id="tea-countdown" class="tea-countdown-timer">00:00:00</span>
+    </h2>
+
+    <div class="SizeBox"></div>
+
+    <div class="card">
+      <div class="card-image">
+        <!-- <img src="path-to-image.jpg" alt="Task Thumbnail" /> -->
+      </div>
+      <div class="category">Design</div>
+      <div class="heading">
+        Create a responsive website layout
+        <div class="author">By <span class="name">John Doe</span> • 2 days ago</div>
+      </div>
+      <div class="details-toggle">
+        <button class="details-button" (click)="toggleDetails()">
+          {{ detailsVisible ? 'Hide Details' : 'Show Details' }}
+        </button>
+        <div class="details-content" [style.display]="detailsVisible ? 'block' : 'none'">
+          <p class="task-type"> <b>Task Type :</b> <br> Frontend Development</p>
+          <br>
+          <p class="Estimated-completion-time"><b>Estimated Completion Time:</b><br>6 hours</p>
+          <br>
+          <p class="Description"><b>Description :</b><br>Build a responsive web page based on the provided Figma design.
+            Ensure
+            cross-browser
+            compatibility and W3C compliance.</p>
+        </div>
+      </div>
+
+      <div class="details">
+        <span class="tag priority">High Priority</span>
+        <span class="tag deadline">Deadline: 36 hours</span>
+      </div>
+      <button class="action-button">Enroll Now</button>
+    </div>
+
+
+    <div class="SizeBox"></div>
+    <!-- This is 24 hour challanges which is made by the client  -->
+    <h2>24 Hour Rush</h2>
+    <div class="SizeBox"></div>
+    <div class="task-section">
+      <div class="card">
+        <div class="card-image">
+          <!-- <img src="" alt="" /> -->
+        </div>
+        <div class="category">Design</div>
+        <div class="heading">Create a responsive website layout
+          <div class="author">By <span class="name">John Doe</span> • 2 days ago</div>
+        </div>
+        <div class="details">
+          <span class="tag priority">High Priority</span>
+          <span class="tag deadline">Deadline: 24 hours</span>
+        </div>
+        <button class="action-button" routerLink="/TaskDetails">View Details</button>
+      </div>
+    </div>
+    <div class="SizeBox"></div>
+    <!--  This open challanges for life time in which no any deadline  -->
+    <h2>Open- Rush</h2>
+    <div class="SizeBox"></div>
+    <div class="task-section">
+      <div class="card">
+        <div class="card-image">
+          <!-- <img src="" alt="" /> -->
+        </div>
+        <div class="category">Design</div>
+        <div class="heading">Create a responsive website layout
+          <div class="author">By <span class="name">John Doe</span> • 2 days ago</div>
+        </div>
+        <div class="details">
+          <span class="tag priority">High Priority</span>
+          <span class="tag deadline">Done</span>
+        </div>
+        <button class="action-button">View Details</button>
+      </div>
+    </div>
+  </div>
+</body>

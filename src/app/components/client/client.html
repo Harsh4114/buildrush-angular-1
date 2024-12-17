@@ -1,0 +1,59 @@
+<app-main-nav-bar  [isLoggedIn]="true" ></app-main-nav-bar>
+<div class="client-container">
+  <div class="stats-header">
+    <div class="stat-card">
+      <h3>Total Posts</h3>
+      <p class="stat-value">{{ totalPosts }}</p>
+      <p class="stat-change positive">+{{ newPostsThisWeek }} this week</p>
+    </div>
+    <div class="stat-card">
+      <h3>Active Tasks</h3>
+      <p class="stat-value">{{ activeTasks }}</p>
+      <p class="stat-change">Currently in progress</p>
+    </div>
+    <div class="stat-card">
+      <h3>Completed Tasks</h3>
+      <p class="stat-value">{{ completedTasks }}</p>
+      <p class="stat-change positive">{{ successRate }}% success rate</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <h2>Your Posts</h2>
+      <button class="new-post-btn" routerLink="/posts/new">Create New Post</button>
+    </div>
+
+    <div class="posts-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Category</th>
+            <th>Points</th>
+            <th>Submissions</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks">
+            <td>{{ task.name }}</td>
+            <td>
+              <span class="category-tag">{{ task.category }}</span>
+            </td>
+            <td>{{ task.points }}</td>
+            <td>{{ task.submissions }}</td>
+            <td>
+              <span class="status-tag" [ngClass]="{'active': task.status === 'Active'}">{{ task.status }}</span>
+            </td>
+            <td>
+              <!-- <button class="action-btn edit" (click)="editPost(task.id)">Edit</button> -->
+              <button class="action-btn delete" (click)="deletePost(task.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

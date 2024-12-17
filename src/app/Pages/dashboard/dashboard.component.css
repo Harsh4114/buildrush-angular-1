@@ -1,0 +1,383 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  padding: 20px;
+}
+
+h2 {
+  font-family: poppins;
+  font-weight: 900;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-dropdown {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.filter-icon {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.event-slider {
+  height: 150px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px dashed #bbb;
+}
+
+.task-section {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  /* Adds spacing between cards */
+  flex-wrap: wrap;
+  /* Ensures cards wrap to the next row if there's not enough space */
+  justify-content: flex-start;
+  /* Aligns cards to the left of the row */
+  align-items: flex-start;
+  /* Aligns cards at the top */
+}
+
+.task-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Card Container */
+.card {
+  flex: 1 1 240px;
+  max-width: 240px;
+  background: white;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Category */
+.category {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #3f79e6;
+  text-transform: uppercase;
+}
+
+/* Heading */
+.heading {
+  font-size: 1em;
+  font-weight: bold;
+  color: #444;
+  line-height: 1.4;
+}
+
+.author {
+  color: #777;
+  font-size: 0.85em;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.name {
+  font-weight: bold;
+  color: #3f79e6;
+}
+
+/* Details Toggle */
+.details-toggle {
+  margin-top: 5px;
+}
+
+.details-button {
+  background: none;
+  border: none;
+  color: #3f79e6;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+.details-button:hover {
+  text-decoration: underline;
+}
+
+.details-content {
+  background-color: #f9f9f9;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Task Details */
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 0.85em;
+  color: #555;
+}
+
+.tag {
+  background-color: #eaeaea;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.75em;
+}
+
+.tag.priority {
+  color: white;
+  background-color: #e63946;
+}
+
+.tag.deadline {
+  background-color: #f1c40f;
+}
+
+/* Action Button */
+.action-button {
+  margin-top: auto;
+  background-color: #3f79e6;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #2a5db8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+/*  Show Deatils button style */
+
+.details-content {
+  font-family: poppins;
+  font-weight: 500;
+  color: rgb(121, 121, 121);
+  font-weight: 500;
+  width: 100%;
+}
+
+.details-content p b {
+  color: #000000;
+  font-weight: 700;
+}
+
+
+/*  Search bar  */
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: .3s ease;
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(89, 33, 255, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(89, 33, 255, 0.4 / 10%);
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+
+  /* Neutral white */
+  color: black;
+  padding: 8px 16px;
+  /* Compact size */
+  font-size: 14px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  /* Align text and arrow */
+  justify-content: space-between;
+  /* Add space between text and arrow */
+  outline: none;
+  background-color: #f3f3f4;
+  box-shadow: 0 0 0 4px rgb(89, 33, 255, 0.4 / 10%);
+
+
+}
+
+.dropdown-btn:hover {
+  outline: none;
+  border-color: rgba(89, 33, 255, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(89, 33, 255, 0.4 / 10%);
+}
+
+/* Arrow Icon */
+.dropdown-arrow {
+  margin-left: 8px;
+  width: 12px;
+  /* Reduced size */
+  height: 12px;
+}
+
+
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 126px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 1;
+  border: 1px solid gray;
+}
+
+/* Dropdown Links */
+.dropdown-menu a {
+  color: black;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect on Links */
+.dropdown-menu a:hover {
+  background-color: #856cff;
+}
+
+/* Show Dropdown on Button Hover */
+.dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+
+.tea-challenges-heading {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+}
+
+.tea-info-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.tea-countdown-timer {
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.SizeBox{
+  height: 20px;
+}

@@ -1,0 +1,127 @@
+.pricing-container {
+  padding: 100px 2rem 2rem;
+  min-height: 100vh;
+  background: black;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 3rem;
+  color: #6a4df5;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  /* Increased gap for better spacing */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: relative;
+}
+
+.popular {
+  transform: scale(1.05);
+  border: 2px solid #6366f1;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #6366f1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #1e293b;
+}
+.subprice{
+  font-size: 16px;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #1e293b;
+}
+.title {
+  color: #1e293b;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 1rem;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #6366f1;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.free-btn {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.free-btn:hover {
+  background: #cbd5e1;
+}
+
+.subscribe-btn {
+  background: #6366f1;
+  color: white;
+}
+
+.subscribe-btn:hover {
+  background: #4f46e5;
+}
+
+/* Additional styles for the new card */
+.pricing-card:last-child {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  /* Darker shadow for emphasis */
+  transform: scale(1.1);
+  /* Slightly bigger to stand out */
+}

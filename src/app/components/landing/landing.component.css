@@ -1,0 +1,129 @@
+.landing {
+    min-height: calc(100vh - 64px);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(135deg, #6366f1, #a855f7); */
+    /* background-color: black; */
+    color: white;
+}
+
+
+.get-started {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #6366f1;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.get-started:hover {
+    transform: translateY(-2px);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 18px;
+    color: #333;
+}
+
+.star-rating .star {
+    font-size: 18px;
+    color: gold;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    /* background-color: black; */
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 6rem;
+
+}
+
+
+.developer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#heart-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+
+        content: url("C:/AppDev/Github_Clone/Git_Project_Flutter/buildrush-angular/src/assets/icon/WhiteHeart.png");
+    }
+
+    50% {
+        content: url("C:/AppDev/Github_Clone/Git_Project_Flutter/buildrush-angular/src/assets/icon/RedHeart.png");
+
+
+    }
+
+    100% {
+        content: url("C:/AppDev/Github_Clone/Git_Project_Flutter/buildrush-angular/src/assets/icon/WhiteHeart.png");
+
+    }
+}
+
+.developer:hover {
+    cursor: default;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color: #111111;
+    background-image: linear-gradient(
+      32deg,
+      rgba(8, 8, 8, 0.74) 30px,
+      transparent
+    );
+    background-size: 60px 60px;
+    background-position: -5px -5px;
+  }
+  
+  
