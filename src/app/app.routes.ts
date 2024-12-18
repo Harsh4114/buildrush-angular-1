@@ -33,6 +33,6 @@ export const routes: Routes = [
   },
   {
     path: 'TaskDetails',
-    component : CardDataComponent
+    component: CardDataComponent
   }
 ];

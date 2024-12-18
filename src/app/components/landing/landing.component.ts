@@ -13,9 +13,10 @@ import { InfoSectionComponent } from "./LandingPageComponent/InfoSection/info-se
   standalone: true,
   imports: [RouterModule, NavbarComponent, DevloperComponent, FooterComponent, LoadingComponent, InfoSectionComponent],
   templateUrl: './landing.component.html',
+
   styleUrls: ['./landing.component.css']
 })
-export class LandingComponent { 
+export class LandingComponent {
   @ViewChild('serviceContainer') serviceContainer!: ElementRef;
 
   private SCROLL_DISTANCE = 250; // Distance to scroll on each button click
