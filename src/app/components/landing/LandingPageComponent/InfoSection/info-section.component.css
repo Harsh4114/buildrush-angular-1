@@ -1,24 +1,25 @@
-/* General Reset */
 body {
-    margin: 0;
+    margin: 20px 0 40px 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    /* Black background */
+    color: white;
+    /* Add this to make text visible on black background */
 }
 
 .container {
     width: 90%;
     max-width: 800px;
-    background-color: #ffffff;
-    /* White container */
+    background-color: white;
+    /* Black background */
     padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Soft shadow */
+    box-shadow: 0 4px 10px #6a4df5, 0 0 20px #6a4df5;
     border-radius: 12px;
-    /* Rounded corners */
     text-align: center;
+    color: white;
+    /* Add this to make text visible on black background */
 }
 
 h1 {
@@ -26,6 +27,9 @@ h1 {
     color: #6a4df5;
     margin-bottom: 20px;
     text-transform: capitalize;
+    text-shadow: 0 0 10px rgba(66, 133, 244, 0.5);
+    /*Added subtle glow to title*/
+
 }
 
 .content {
@@ -40,39 +44,42 @@ h1 {
     text-align: left;
     padding: 15px;
     background-color: #f5f5f5;
-    /* Light gray background for the board */
     border: 1px solid #e0e0e0;
-    /* Soft gray border */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Board shadow effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 152, 0, 0.2);
+    /*Added glow*/
     border-radius: 8px;
-    /* Rounded corners */
     flex: 1 0 calc(50% - 20px);
-    /* Take half the width with some gap */
 }
 
 .point .emoji {
     font-size: 28px;
     margin-right: 15px;
     color: #ff9800;
-    /* Orange emoji color */
 }
 
 .point p {
     margin: 0;
     font-size: 16px;
     color: #555555;
-    /* Slightly darker text */
 }
 
 .divider {
     height: 1px;
     background-color: #cccccc;
-    /* Light gray line */
     margin: 10px 0;
 }
 
 .hard {
     color: #6a4df5;
-    /* Highlighted title color */
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color: #111111;
+    background-image: linear-gradient(32deg,
+            rgba(8, 8, 8, 0.74) 30px,
+            transparent);
+    background-size: 60px 60px;
+    background-position: -5px -5px;
 }

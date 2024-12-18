@@ -4,28 +4,56 @@
 <main class="landing">
 
     <div class="bg">
-
         <!--  Hero Section  -->
         <section class="hero">
-            <h1>BuildRush.in</h1>
-            <!-- <p id="tag-line">
-            BuildRush is a platform for developers to showcase their projects and get feedback from the community.
-        </p> -->
-            <button routerLink="/signup" class="get-started">Get Started</button>
+            <h1 class="gradient-text">BuildRush.in</h1>
+            
+
+            <button type="button" class="btn"  routerLink="/signup"  >
+              <strong>Get Started</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
+            
+              <div id="glow">
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </button>
+            
+
+
         </section>
 
+
+        <app-info-section></app-info-section>
     </div>
 
+    <div class="marquee">
+        <div class="marquee-content">
+            <span class="data">Web Development</span>
+            <span class="data">Mobile Development</span>
+            <span class="data">Machine Learning</span>
+            <span class="data">Data Science</span>
+            <span class="data">Specific Function</span>
+            <span class="data">IdeaBhoot</span>
 
-    <!--  Service Section  -->
-    <app-info-section></app-info-section>
+        </div>
+    </div>
 
-
-
-
+    <div class="marquee">
+        <div class="marquee-content">
+            <span class="data">Cloud Computing</span>
+            <span class="data">Cybersecurity</span>
+            <span class="data">Artificial Intelligence</span>
+            <span class="data">Game Development</span>
+            <span class="data">UI/UX</span>
+        </div>
+    </div>
     <!--  Developer Section  -->
-    <app-devloper></app-devloper>
 
+
+    <app-devloper></app-devloper>
     <!--  Love Message  -->
     <section class="developer">
         <b>
