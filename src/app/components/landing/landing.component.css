@@ -124,27 +124,8 @@ h1 {
     height: 20px;
     vertical-align: middle;
     transition: transform 0.2s ease, filter 0.2s ease;
-    animation: pulse 2s infinite;
+
 }
-
-@keyframes pulse {
-    0% {
-
-        content: url("C:/AppDev/Github_Clone/Git_Project_Flutter/buildrush-angular/src/assets/icon/WhiteHeart.png");
-    }
-
-    50% {
-        content: url("C:/AppDev/Github_Clone/Git_Project_Flutter/buildrush-angular/src/assets/icon/RedHeart.png");
-
-
-    }
-
-    100% {
-        content: url("C:/AppDev/Github_Clone/Git_Project_Flutter/buildrush-angular/src/assets/icon/WhiteHeart.png");
-
-    }
-}
-
 
 /*  Background  */
 .bg {
