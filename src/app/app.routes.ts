@@ -6,11 +6,11 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { MainComponent } from './components/main/main.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { ClientComponent } from './components/client/client.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 import { ProgrammerComponent } from './Pages/programmer/programmer.component';
 import { SettingComponent } from './Pages/setting/setting.component';
 import { CardDataComponent } from './Pages/card-data/card-data.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -21,8 +21,11 @@ export const routes: Routes = [
   { path: 'signup', component: RegisterComponent },
   { path: 'main', component: MainComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'client', component: ClientComponent },
   { path: 'dashboard', component: DashboardComponent },
+  {
+    path: 'leaderboard',
+    component: LeaderboardComponent,
+  },
   {
     path: 'programmer',
     component: ProgrammerComponent

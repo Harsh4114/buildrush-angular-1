@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .header {
+    background-color: lightgray;
+    padding: 10px;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .list {
+    padding: 10px;
+    flex-grow: 1; /* Allows the list to take up the remaining space */
+  }
