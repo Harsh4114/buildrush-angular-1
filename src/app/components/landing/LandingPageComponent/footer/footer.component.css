@@ -143,3 +143,32 @@
     margin-bottom: 20px;
     font-family: Arial, sans-serif;
 }
+
+
+.pulse {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(129, 255, 129);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1s infinite;
+    margin-right: 10px;
+  
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+      
+    }
+
+    50% {
+        transform: scale(1.2);
+   
+    }
+
+    100% {
+        transform: scale(1);
+        
+    }
+}
