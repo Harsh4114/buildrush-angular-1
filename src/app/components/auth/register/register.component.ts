@@ -1,26 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, inject,} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule and FormGroup,Validators
 import { NavbarComponent } from '../../navbar/navbar.component';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule, NavbarComponent],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule, NavbarComponent], // Removed FormsModule, it's not needed with ReactiveFormsModule
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'], // this is file for the sign up page style file path as a external file 
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
-  registerData = {
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  };
+ 
+router = inject(Router); 
 
-  onSubmit() {
-    // TODO: Implement registration logic
-    console.log('Registration submitted:', this.registerData);
+  submit() {
+    alert('Form Submitted');
+    this.router.navigateByUrl('/login') // Navigate to /login page
   }
 }
