@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from '../../navbar/navbar.component';
+import { AuthService } from '../../../../service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -22,5 +23,9 @@ export class LoginComponent {
   onSubmit() {
     // TODO: Implement login logic
     console.log('Login submitted:', this.loginData);
+    const { email, password } = this.loginData;
+    auth : AuthService; 
+    
+
   }
 }

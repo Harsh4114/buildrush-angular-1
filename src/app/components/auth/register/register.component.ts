@@ -1,24 +1,43 @@
-import { Component, inject,} from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AuthService } from '../../../../service/auth.service';
+import { NavbarComponent } from "../../navbar/navbar.component";
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule and FormGroup,Validators
-import { NavbarComponent } from '../../navbar/navbar.component';
-
-import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, RouterModule, ReactiveFormsModule, NavbarComponent], // Removed FormsModule, it's not needed with ReactiveFormsModule
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
+  imports: [NavbarComponent, CommonModule, ReactiveFormsModule], 
 })
 export class RegisterComponent {
- 
-router = inject(Router); 
+  registerForm: FormGroup;
 
-  submit() {
-    alert('Form Submitted');
-    this.router.navigateByUrl('/login') // Navigate to /login page
+  constructor(private fb: FormBuilder, private authService: AuthService) {
+    this.registerForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['', [Validators.required]],
+    });
+  }
+
+  onSubmit() {
+    if (this.registerForm.valid) {
+      const { email, username, password, confirmPassword } = this.registerForm.value;
+      if (password === confirmPassword) {
+        this.authService.SignUp(email, username, password).subscribe((result) => {
+          if (result) {
+            console.log('Signup successful:', result);
+          } else {
+            console.error('Signup failed.');
+          }
+        });
+      } else {
+        console.error('Passwords do not match.');
+      }
+    } else {
+      console.error('Form is invalid.');
+    }
   }
 }
